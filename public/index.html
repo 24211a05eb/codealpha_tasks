@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Northstar Market — Considered goods for everyday life</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="announcement">
+      Free shipping on orders over $75 <span>✦</span> Thoughtful goods, made to
+      last
+    </div>
+    <header class="site-header">
+      <a class="brand" href="/">NORTHSTAR<span>MARKET</span></a>
+      <nav>
+        <a href="#shop">Shop all</a><a href="#story">Our story</a
+        ><a href="#newsletter">Journal</a>
+      </nav>
+      <div class="header-actions">
+        <button class="icon-button" id="accountButton" aria-label="Account">
+          ◯</button
+        ><button class="cart-button" id="cartButton">
+          Cart <b id="cartCount">0</b>
+        </button>
+      </div>
+    </header>
+    <main>
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">The spring edit / 2025</p>
+          <h1>Good things,<br /><em>well chosen.</em></h1>
+          <p class="hero-text">
+            Everyday objects with a point of view. Designed for the way you live
+            now, and the years ahead.
+          </p>
+          <a class="button button-dark" href="#shop"
+            >Explore the collection <span>↗</span></a
+          >
+        </div>
+        <div class="hero-art">
+          <div class="hero-sun"></div>
+          <div class="hero-shape"></div>
+          <span class="hero-label">Objects for<br />the in-between</span>
+        </div>
+      </section>
+      <section class="category-strip" id="shop">
+        <div>
+          <p class="eyebrow">Browse by category</p>
+          <h2>Find your next favorite.</h2>
+        </div>
+        <div class="category-links">
+          <button class="category active" data-category="All">
+            All goods <span>↗</span></button
+          ><button class="category" data-category="Home">
+            Home <span>↗</span></button
+          ><button class="category" data-category="Apparel">
+            Apparel <span>↗</span></button
+          ><button class="category" data-category="Accessories">
+            Accessories <span>↗</span>
+          </button>
+        </div>
+      </section>
+      <section class="products-section">
+        <div class="section-heading">
+          <h2>Made for your everyday</h2>
+          <a href="#shop" id="clearFilter">View all <span>↗</span></a>
+        </div>
+        <div class="product-grid" id="productGrid">
+          <div class="loading">Finding good things...</div>
+        </div>
+      </section>
+      <section class="story" id="story">
+        <div class="story-image"></div>
+        <div class="story-copy">
+          <p class="eyebrow">Our point of view</p>
+          <h2>Less, but better.</h2>
+          <p>
+            We believe the things you live with should earn their place. So we
+            look for useful, beautiful, well-made objects from people who care
+            about the details.
+          </p>
+          <a class="text-link" href="#newsletter"
+            >A little more about us <span>↗</span></a
+          >
+        </div>
+      </section>
+      <section class="newsletter" id="newsletter">
+        <p class="eyebrow">A note from Northstar</p>
+        <h2>Good things, in your inbox.</h2>
+        <p>
+          New finds, thoughtful stories, and a little inspiration for your
+          everyday.
+        </p>
+        <form id="newsletterForm">
+          <input
+            type="email"
+            placeholder="Your email address"
+            required
+          /><button class="button button-dark">
+            Sign me up <span>↗</span>
+          </button>
+        </form>
+      </section>
+    </main>
+    <footer>
+      <a class="brand" href="/">NORTHSTAR<span>MARKET</span></a>
+      <p>© 2025 Northstar Market. Made for everyday.</p>
+      <div>
+        <a href="#shop">Shop</a><a href="#story">About</a
+        ><a href="#newsletter">Contact</a>
+      </div>
+    </footer>
+    <div class="drawer-backdrop" id="drawerBackdrop"></div>
+    <aside class="cart-drawer" id="cartDrawer">
+      <div class="drawer-header">
+        <h2>Your cart</h2>
+        <button class="close-button" data-close>×</button>
+      </div>
+      <div id="cartItems"></div>
+      <div class="cart-footer">
+        <div><span>Subtotal</span><strong id="cartTotal">$0.00</strong></div>
+        <button class="button button-dark full-width" id="checkoutButton">
+          Checkout <span>↗</span>
+        </button>
+      </div>
+    </aside>
+    <div class="modal-backdrop" id="accountModal">
+      <div class="modal">
+        <button class="close-button" data-close>×</button>
+        <div id="accountContent"></div>
+      </div>
+    </div>
+    <div class="modal-backdrop" id="checkoutModal">
+      <div class="modal">
+        <button class="close-button" data-close>×</button>
+        <div id="checkoutContent"></div>
+      </div>
+    </div>
+    <div class="toast" id="toast"></div>
+    <script src="/app.js"></script>
+  </body>
+</html>
